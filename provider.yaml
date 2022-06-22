@@ -1,0 +1,18 @@
+http:
+  routers:
+    routerA:
+      rule: "PathPrefix(`/servicea`)"
+      service: "serviceA"
+    routerB:
+      rule: "PathPrefix(`/serviceb`)"
+      service: "serviceB"
+
+  services:
+    serviceA:
+      loadBalancer:
+        servers:
+          - url: http://servicea
+    serviceB:
+      loadBalancer:
+        servers:
+          - url: http://serviceb

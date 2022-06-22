@@ -1,0 +1,9 @@
+FROM golang:1.19beta1-alpine3.16
+
+WORKDIR /app
+
+COPY ./ ./
+
+RUN go build -o app serviceb.go
+
+CMD ["./app"]

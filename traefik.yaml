@@ -1,0 +1,7 @@
+providers:
+  file:
+    filename: /etc/traefik/provider.yaml
+
+entryPoints:
+  web:
+    address: ":8888"
